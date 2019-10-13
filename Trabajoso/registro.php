@@ -47,6 +47,28 @@
 						<input type="password" name="clave" placeholder="Contraseña" id="empPasswordBox" required> <br>
 						<label for="empPasswordBox" id="empPassBoxLabel"> Contraseña </label>
 						<input type="submit" id="aceptarRegEmp" name="aceptarRegEmp" value="Registrarse">
+						<select id="listaPaisesEmpresa">
+							<option value="Argentina"> Argentina </option>
+							<option value="Bolivia"> Bolivia </option>
+							<option value="Chile"> Chile </option>
+							<option value="Colombia"> Colombia </option>
+							<option value="Costa Rica"> Costa Rica </option>
+							<option value="Cuba"> Cuba </option>
+							<option value="Ecuador"> Ecuador </option>
+							<option value="El Salvador"> El Salvador </option>
+							<option value="Guatemala"> Guatemala </option>
+							<option value="Honduras"> Honduras </option>
+							<option value="México"> México </option>
+							<option value="Nicaragua"> Nicaragua </option>
+							<option value="Panamá"> Panamá </option>
+							<option value="Paraguay"> Paraguay </option>
+							<option value="Perú"> Perú </option>
+							<option value="Puerto Rico"> Puerto Rico </option>
+							<option value="República Dominicana"> República Dominicana </option>
+							<option value="Uruguay"> Uruguay </option>
+							<option value="Venezuela"> Venezuela </option>
+						</select>
+						<label for="listaPaisesEmpresa" id="listaPaisEmpLabel"> País </label>
 					</form>
 				</div>
 				<div class="fadingBoxAspirante"> 
@@ -65,6 +87,28 @@
 						<label for="radioFem" id="radioFemLabel"> Femenino </label>
 						<label id="sexoLabel"> Sexo: </label>
 						<input type="submit" id="aceptarRegAsp" name="aceptarRegAsp" value="Registrarse"> 
+						<select id="listaPaisesAspirante">
+							<option value="Argentina"> Argentina </option>
+							<option value="Bolivia"> Bolivia </option>
+							<option value="Chile"> Chile </option>
+							<option value="Colombia"> Colombia </option>
+							<option value="Costa Rica"> Costa Rica </option>
+							<option value="Cuba"> Cuba </option>
+							<option value="Ecuador"> Ecuador </option>
+							<option value="El Salvador"> El Salvador </option>
+							<option value="Guatemala"> Guatemala </option>
+							<option value="Honduras"> Honduras </option>
+							<option value="México"> México </option>
+							<option value="Nicaragua"> Nicaragua </option>
+							<option value="Panamá"> Panamá </option>
+							<option value="Paraguay"> Paraguay </option>
+							<option value="Perú"> Perú </option>
+							<option value="Puerto Rico"> Puerto Rico </option>
+							<option value="República Dominicana"> República Dominicana </option>
+							<option value="Uruguay"> Uruguay </option>
+							<option value="Venezuela"> Venezuela </option>
+						</select>
+						<label for="listaPaisesAspirante" id="listaPaisAspLabel"> País </label>
 					</form>
 				</div>
 				<button id="regEmpresa"> Registrarse Como Empresa </button>

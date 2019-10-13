@@ -66,7 +66,7 @@ h2 {
 	border-color: #FFC08E;
 	width: 80%;
 	height: 8%;
-	top: 10%;
+	top: 7%;
 	left: 10%;
 	padding-left: 0.25vw;
 	font-size: 1.15vw;
@@ -74,7 +74,7 @@ h2 {
 
 #nameBoxLabel,#empNameBoxLabel {
 	position: absolute;
-	top: 4%;
+	top: 1%;
 	left: 10%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
@@ -86,7 +86,7 @@ h2 {
 	border-color: #FFC08E;
 	width: 80%;
 	height: 8%;
-	top: 27%;
+	top: 24%;
 	left: 10%;
 	padding-left: 0.25vw;
 	font-size: 1.15vw;
@@ -94,7 +94,7 @@ h2 {
 
 #emailBoxLabel,#empEmailBoxLabel {
 	position: absolute;
-	top: 21%;
+	top: 18%;
 	left: 10%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
@@ -106,7 +106,7 @@ h2 {
 	border-color: #FFC08E;
 	width: 80%;
 	height: 8%;
-	top: 44%;
+	top: 41%;
 	left: 10%;
 	padding-left: 0.25vw;
 	font-size: 1.15vw;
@@ -114,7 +114,7 @@ h2 {
 
 #passBoxLabel,#empPassBoxLabel {
 	position: absolute;
-	top: 38%;
+	top: 35%;
 	left: 10%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
@@ -126,31 +126,91 @@ h2 {
 	border-color: #FFC08E;
 	width: 55%;
 	height: 8%;
-	top: 60%;
+	top: 55%;
 	left: 35%;
 	padding-left: 0.25vw;
 	font-size: 1.15vw;
 }
 
+
+select {
+	width: 200px;
+	height: 200px;
+}
+
+
 #dateBoxLabel {
 	position: absolute;
-	top: 58%;
+	top: 53%;
 	left: 10%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
+}
+
+#listaPaisesEmpresa {
+	position: absolute;
+	top: 58%;
+	left: 20%;
+	height: 8%;
+	width: 72%;
+	padding-left: 0.25vw;
+	font-size: 1.15vw;
+	background: #FFC08E;
+	border-right-color: #FFC08E;
+	border-bottom-color: #FFC08E;
+	border-left-width: 0.12vw;
+	border-top-width: 0.12vw;
+	border-top-color: gray;
+	border-left-color: gray;
+}
+
+#listaPaisEmpLabel {
+	position: absolute;
+	top: 59%;
+	left: 10%;
+	font-size: 1.15vw;
+	font-family: Verdana, Geneva, sans-serif;
+
+}
+
+#listaPaisesAspirante {
+	position: absolute;
+	top: 67%;
+	left: 20%;
+	height: 8%;
+	width: 72%;
+	padding-left: 0.25vw;
+	font-size: 1.15vw;
+	background: #FFC08E;
+	border-right-color: #FFC08E;
+	border-bottom-color: #FFC08E;
+	border-left-width: 0.12vw;
+	border-top-width: 0.12vw;
+	border-top-color: gray;
+	border-left-color: gray;
+
+}
+
+#listaPaisAspLabel {
+	position: absolute;
+	top: 68%;
+	left: 10%;
+	font-size: 1.15vw;
+	font-family: Verdana, Geneva, sans-serif;
+
 }
 
 #radioMasc {
 	position: absolute;
 	width: 5%;
 	height: 5%;
-	top: 75%;
+	top: 77%;
 	left: 35%;
 }
 
 #radioMascLabel {
 	position: absolute;
-	top: 75%;
+	top: 77%;
 	left: 42%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
@@ -160,13 +220,13 @@ h2 {
 	position: absolute;
 	width: 5%;
 	height: 5%;
-	top: 75%;
+	top: 77%;
 	left: 65%;
 }
 
 #radioFemLabel {
 	position: absolute;
-	top: 75%;
+	top: 77%;
 	left: 72%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
@@ -174,7 +234,7 @@ h2 {
 
 #sexoLabel {
 	position: absolute;
-	top: 75%;
+	top: 77%;
 	left: 20%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
