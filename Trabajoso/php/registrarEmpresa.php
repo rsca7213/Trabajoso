@@ -33,7 +33,8 @@
 
 			}
 			catch(Exception $e){
-				die("error: " . $e->GetMessage());
+				//die("error: " . $e->GetMessage());
+				echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
 			}
 			finally{
 				$base=null;
