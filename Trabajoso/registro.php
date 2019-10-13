@@ -11,6 +11,19 @@
 	</head>
 
 	<body>
+
+	<?php
+		if(isset($_POST['aceptarRegAsp'])){
+			require("registrarAspirante.php");
+		
+		}
+
+		if(isset($_POST['aceptarRegEmp'])){
+			require("registrarEmpresa.php");
+		
+		}
+	?>
+
 		<div class="siteContainer"> 
 			<h1 class="h1"> <a href="login.html" style="text-decoration: none; color: #313131;"> TRABAJOSO </a> </h1>
 			<h3 class="h3"> ¿Necesitas empleo? <br> ¡Deja que nuestro oso lo consiga por ti! 	</h3>
@@ -26,25 +39,25 @@
 					<div id="imagenSelOp">  <img src="img/registroimg/imagenSelOp.png" class="imagen"> </div>
 				</div>
 				<div class="fadingBoxEmpresa">
-					<form action="registroEmpresa.php" method="post">
+					<form action="<?php echo($_SERVER['PHP_SELF']);?>" method="post">
 						<input type="text" name="nombreEmp" placeholder="Nombre De La Empresa" id="empNameBox" required> <br>
 						<label for="empNameBox" id="empNameBoxLabel"> Nombre De La Empresa </label> <br>
 						<input type="text" name="email" placeholder="Email" id="empEmailBox" required> <br>
 						<label for="empEmailBox" id="empEmailBoxLabel"> Email </label> <br>
 						<input type="password" name="clave" placeholder="Contraseña" id="empPasswordBox" required> <br>
 						<label for="empPasswordBox" id="empPassBoxLabel"> Contraseña </label>
-						<input type="submit" id="aceptarRegEmp" value="Registrarse">
+						<input type="submit" id="aceptarRegEmp" name="aceptarRegEmp" value="Registrarse">
 					</form>
 				</div>
 				<div class="fadingBoxAspirante"> 
-					<form id="form_datos" action="registrarAspirante.php" method="post">
+					<form id="form_datos" action="<?php echo($_SERVER['PHP_SELF']);?>" method="post">
 						<input type="text" name="nombre" placeholder="Nombre Completo" id="nameBox" required> <br>
 						<label for="nameBox" id="nameBoxLabel"> Nombre Completo </label>
 						<input type="text" name="email" placeholder="Email" id="emailBox" required> <br>
 						<label for="emailBox" id="emailBoxLabel" class="email"> Email </label>
 						<input type="password" name="clave" placeholder="Contraseña" id="passwordBox" required> <br>
 						<label for="passwordBox" id="passBoxLabel"> Contraseña </label>
-						<input type="date" name="fecha" value="2000-12-31" min="1920-01-01" max="2001-12-31" id="dateBox" required> <br>
+						<input type="date" name="fecha" value="2000-12-31"  id="dateBox" required> <br>
 						<label for="dateBox" id="dateBoxLabel"> Fecha De <br> Nacimiento </label>
 						<input type="radio" name="sexo" id="radioMasc" value="Masculino" required>
 						<label for="radioMasc" id="radioMascLabel"> Masculino </label>
