@@ -1,0 +1,115 @@
+
+
+.back {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-image: url(../../img/index/background.png);
+	background-size: cover;
+}
+
+.bearContainer {
+	position: absolute;
+	bottom: 0%;
+	left: 43%;
+	height: 20%;
+	width: 14%;
+}
+
+.imagen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0%;
+	top: 0%;
+}
+
+#hline1 {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 77%;
+	border: solid #232323 0.1vw;
+}
+
+#hline2 {
+	position: absolute;
+	width: 50%;
+	left: 25%;
+	top: 22%;
+	border: solid #232323 0.1vw;
+}
+
+h1 {
+	position: absolute;
+	left: 40%;
+	top: 2.5%;
+	font-family: Aileron,Verdana,Gevena,sans-serif;
+	font-size: 2.75vw;
+	color: #232323;
+	font-weight: bolder;
+}
+
+h2 {
+	position: absolute;
+	text-align: center;
+	left: 32.5%;
+	top: 10%;
+	font-family: Aileron,Gevena,sans-serif;
+	font-size: 1.75vw;
+	color: #232323;
+	font-weight: bold;
+}
+
+#tagline {
+	position: absolute;
+	text-align: justify;
+	top: 30%;
+	left: 30%;
+	width: 40%;
+	font-family: Verdana,Gevena,sans-serif;
+	font-size: 1.6vw;
+	color: #232323;
+}
+
+#accederBtn {
+	position: absolute;
+	top: 60%;
+	left: 38%;
+	width: 24%;
+	height: 10%;
+	text-align: right;
+	padding: 0.5vw;
+	font-family: Verdana,Gevena,sans-serif;
+	font-size: 1.45vw;
+	color: #232323;
+	background: #FF8B00;
+	background-size: cover;
+	border: solid #232323 0.15vw;
+	cursor: pointer;
+	border-radius: 1vw;
+}
+
+#imagenBtn {
+	position: absolute;
+	top: 5%;
+	height: 90%;
+	left: 5%;
+	width: 18%;
+}
+
+#accederBtn:hover {
+	transition-duration: 0.5s;
+	background: #FF5100;
+}
+
+.quienesContainer {
+	position: absolute;
+	z-index: 2;
+	top: 25%;
+	left: 28%;
+	width: 25%;
+	height: 6.5%;
+}
