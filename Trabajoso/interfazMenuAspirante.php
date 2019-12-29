@@ -90,7 +90,7 @@
 					<?php foreach($registros as $persona):?>
 
 					<label for="nameBox" id="nameBoxLabel"> Nombre Completo </label>
-					<input type="text" name="nombre" placeholder="Nombre Completo" id="nameBox" value="<?php echo($persona->nombre);?>" required pattern="[a-zA-ZÀ-ž\s]{4,60}" title="Debe tener 4 caracteres como mínimo y 60 como máximo.&#13;&#10;Solo puede tener letras y espacios."> <br>
+					<input type="text" name="nombre" placeholder="Nombre Completo" id="nameBox" value="<?php echo($persona->nombre);?>" required pattern="[a-zA-ZÀ-ž\s]{4,60}" title="Debe tener 4 caracteres como mínimo y 60 como máximo.&#13;&#10;Solo puede tener letras, letras acentuadas y espacios."> <br>
 					<label for="emailBox" id="emailBoxLabel" class="email"> Email </label>
 					<input type="email" name="email" placeholder="Email" id="emailBox" value="<?php echo($persona->correo);?>" required pattern=".{4,50}"title="Debe tener 4 caracteres como mínimo y 50 como máximo."> <br>
 					<label for="passwordBox" id="passBoxLabel"> Contraseña </label>

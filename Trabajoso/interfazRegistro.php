@@ -71,13 +71,13 @@
 							<option value="Venezuela"> Venezuela </option>
 						</select>
 						<label for="listaPaisesEmpresa" id="listaPaisEmpLabel"> País </label>
-						<textarea rows="4" name=direccion id="dirEmpresa" required placeholder="Dirección" title="Debe tener 500 como máximo."></textarea> <br>
+						<textarea rows="4" name=direccion id="dirEmpresa" required placeholder="Dirección" title="Debe tener 500 caracteres como máximo."></textarea> <br>
 						<label for="dirEmpresa" id="dirEmpresaLabel"> Dirección </label>
 					</form>
 				</div>
 				<div class="fadingBoxAspirante"> 
 					<form id="form_datos" action="<?php echo($_SERVER['PHP_SELF']);?>" method="post">
-						<input type="text" name="nombre" placeholder="Nombre Completo" id="nameBox" required pattern="[a-zA-ZÀ-ž\s]{4,60}" title="Debe tener 4 caracteres como mínimo y 60 como máximo.&#13;&#10;Solo puede tener letras y espacios."> <br>
+						<input type="text" name="nombre" placeholder="Nombre Completo" id="nameBox" required pattern="[a-zA-ZÀ-ž\s]{4,60}" title="Debe tener 4 caracteres como mínimo y 60 como máximo.&#13;&#10;Solo puede tener letras, letras acentuadas y espacios."> <br>
 						<label for="nameBox" id="nameBoxLabel"> Nombre Completo </label>
 						<input type="email" name="email" placeholder="Email" id="emailBox" required pattern=".{4,50}"title="Debe tener 4 caracteres como mínimo y 50 como máximo."> <br>
 						<label for="emailBox" id="emailBoxLabel" class="email"> Email </label>

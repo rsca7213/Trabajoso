@@ -84,10 +84,10 @@
 						<label for="emailBox" id="emailBoxLabel" class="email"> Email </label>
 						<input type="email" name="emailBox" value="<?php echo($persona->correo);?>" placeholder="Email" id="emailBox" required pattern=".{4,50}" title="Debe tener 4 caracteres como mínimo y 50 como máximo."> <br>
 						<label for="passwordBox" id="passBoxLabel"> Contraseña </label>
-						<input type="password" name="passBox" value="<?php echo($persona->clave);?>" placeholder="Contraseña" id="passBox" required pattern="[^' ']{4,20}" title="Debe tener 4 caracteres como mínimo y 20 como máximo. No puede tener espacios.> <br>
+						<input type="password" name="passBox" value="<?php echo($persona->clave);?>" placeholder="Contraseña" id="passBox" required pattern="[^' ']{4,20}" title="Debe tener 4 caracteres como mínimo y 20 como máximo. No puede tener espacios."> <br>
 						<label for="listaPaises" id="listaPaisLabel"> País </label>
 						<select id="listaPaises" name="listaPaises">
-							<option value="Argentina" <?php echo ($persona->pais=='Argentina')?'selected':'' ?>> Argentina </option>
+						<option value="Argentina" <?php echo ($persona->pais=='Argentina')?'selected':'' ?>> Argentina </option>
 						<option value="Bolivia" <?php echo ($persona->pais=='Bolivia')?'selected':'' ?>> Bolivia </option>
 						<option value="Chile" <?php echo ($persona->pais=='Chile')?'selected':'' ?>> Chile </option>
 						<option value="Colombia" <?php echo ($persona->pais=='Colombia')?'selected':'' ?>> Colombia </option>
@@ -109,7 +109,7 @@
 						</select> <br>
 						<?php endforeach;?>
 						<label for="dirEmpresa" id="dirEmpresaLabel"> Dirección </label>
-						<textarea rows="4" name=direccion id="dirEmpresa" required placeholder="Dirección"><?php echo($persona->direccion);?></textarea> <br> 
+						<textarea rows="4" name=direccion id="dirEmpresa" required placeholder="Dirección" title="Debe tener 500 caracteres como máximo."><?php echo($persona->direccion);?></textarea> <br> 
 						<hr id="perfilLine2">
 						<input type="submit" id="aceptarEditar" name="aceptarEditar" value="Actualizar Perfil"> 
 					</form>

@@ -36,7 +36,7 @@
 					<h1 class="h1"> &ensp; Iniciar Sesión </h1>
     			</div>
     			<form action="<?php echo($_SERVER['PHP_SELF']);?>" method="post"> 
-    				<input type="email" name="email" placeholder="Email" id="input1" required pattern=".{4,50}" title="Debe tener Debe tener 4 caracteres como mínimo y 50 como máximo."> <br>
+    				<input type="email" name="email" placeholder="Email" id="input1" required pattern=".{4,50}" title="Debe tener 4 caracteres como mínimo y 50 como máximo."> <br>
     				<input type="password" name="clave" placeholder="Contraseña" id="input2" required pattern="[^' ']{4,20}" title="Debe tener 4 caracteres como mínimo y 20 como máximo. No puede tener espacios."> <br>
     				<input type="submit" id="InitBtn" name="InitBtn" value="Iniciar Sesión"> <br>
     			</form>
