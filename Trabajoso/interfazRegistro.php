@@ -104,6 +104,7 @@
 				<button id="regEmpresa"> Registrarse Como Empresa </button>
 				<button id="regAspirante"> Registrarse Como Aspirante </button>
 			</div>
+			<div id="errorCover"> </div>
 			<div id="errorBox"> 
 				<div id="errorText"></div>
 				<div id="errorBtn"> 

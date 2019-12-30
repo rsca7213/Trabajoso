@@ -271,7 +271,7 @@
 								echo('<p>'.$empp[0]->direccion.'</p>');
 								echo('</div>');
 								echo('<div class="mapsImg">
-     							 			<a href="https://google.com/maps/search/'.$empp[0]->nombre.'/'.$empp[0]->direccion.'/'.$empp[0]->pais.'" target="_blank"><img class="imagen" src="img/menuAsp/vermaps.png" alt="mapa"></a>
+     							 			<a href="https://google.com/maps/search/'.$empp[0]->nombre.'%20'.$empp[0]->direccion.'%20'.$empp[0]->pais.'" target="_blank"><img class="imagen" src="img/menuAsp/vermaps.png" alt="mapa"></a>
      							 		</div>');
 								echo('</div>');
 								echo('<br>');

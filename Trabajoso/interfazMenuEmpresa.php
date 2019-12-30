@@ -13,6 +13,7 @@
 	</head>
 
 	<body> 
+		<div id="errorCover"> </div>
 		<div id="errorBox"> 
 			<div id="errorText"></div>
 			<div id="errorBtn"> 
