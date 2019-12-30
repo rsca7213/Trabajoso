@@ -6,6 +6,8 @@
 
 ### Importante
 
+<hr>
+
 * Para utilizar esta aplicación se requiere de la aplicación **XAAMP**
 
 * Se debe colocar la aplicación en la carpeta htdocs de XAAMP **ej.: C:\xaamp:\htdocs\trabajoso**
