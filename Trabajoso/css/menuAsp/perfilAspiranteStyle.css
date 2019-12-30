@@ -198,7 +198,7 @@
 	border-color: #FFAD00;
 	font-size: 1.25vw;
 	font-family: Verdana, Geneva, sans-serif;
-	cursor: all-scroll;
+	cursor: pointer;
 }
 
 #aceptarEditar:hover {

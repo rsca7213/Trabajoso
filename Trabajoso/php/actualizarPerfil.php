@@ -30,15 +30,79 @@
 					}
 
 					if($idConsultado!=$_SESSION['id']){
-
-						echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
+						echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
+							document.querySelector('#errorText').innerHTML = \"El correo electrónico ya existe.\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"X\");
+							img.setAttribute(\"src\",\"img/loginimg/xblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"error\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/error.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+						</script>");
+						//echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
 					}else{
 
 						$sql="UPDATE usuarios2 SET nombre=:nombre,clave=:clave,correo=:correo, fecha=:fecha, sexo=:sexo, pais=:pais WHERE id='" . $_SESSION['id'] . "'" ;
 						$resultado2=$base->prepare($sql);
 						$resultado2->execute(array(":nombre"=>$nombre,":clave"=>$clave,":correo"=>$correo,":fecha"=>$fecha,":sexo"=>$sexo,":pais"=>$pais));
-				
-						echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
+						echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"Perfil actualizado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+						</script>");						
+						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
 				
 						$resultado2->closeCursor();
 
@@ -49,8 +113,40 @@
 					$sql3="UPDATE usuarios2 SET nombre=:nombre,clave=:clave,correo=:correo, fecha=:fecha, sexo=:sexo, pais=:pais WHERE id='" . $_SESSION['id'] . "'" ;
 						$resultado3=$base->prepare($sql3);
 						$resultado3->execute(array(":nombre"=>$nombre,":clave"=>$clave,":correo"=>$correo,":fecha"=>$fecha,":sexo"=>$sexo,":pais"=>$pais));
-				
-						echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
+						echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"Perfil actualizado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+						</script>");										
+						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
 				
 						$resultado3->closeCursor();
 				}
@@ -59,6 +155,39 @@
 	
 			}
 			catch(Exception $e){
+				echo("<script type=\"text/javascript\" defer>
+				document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
+				document.querySelector('#errorText').innerHTML = \"Error de conexión con el servidor, intentelo de nuevo.\";
+				var img = document.createElement(\"img\");
+				img.setAttribute(\"class\",\"imagen\");
+				img.setAttribute(\"alt\",\"X\");
+				img.setAttribute(\"src\",\"img/loginimg/xblack.png\");
+				document.querySelector('#errorBtnIcon').appendChild(img);
+				var boxImg = document.createElement(\"img\");
+				boxImg.setAttribute(\"class\",\"imagen\");
+				boxImg.setAttribute(\"alt\",\"error\");
+				boxImg.setAttribute(\"src\",\"img/loginimg/error.png\");
+				document.querySelector('#errorImg').appendChild(boxImg);
+				document.querySelector('#errorBtnText').style.visibility = 'visible';
+				document.querySelector('#errorBtn').style.visibility = 'visible';
+				document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+				document.querySelector('#errorBox').style.visibility = 'visible';
+				document.querySelector('#errorImg').style.visibility = 'visible';
+				document.querySelector('#errorText').style.visibility = 'visible';
+				const btn = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.visibility = 'visible';
+				btn.addEventListener('click', () => {
+					document.querySelector('#errorBtnText').style.visibility = 'hidden';
+					document.querySelector('#errorBtn').style.visibility = 'hidden';
+					document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+					document.querySelector('#errorBox').style.visibility = 'hidden';
+					document.querySelector('#errorImg').style.visibility = 'hidden';
+					document.querySelector('#errorText').style.visibility = 'hidden';
+					document.querySelector('#errorImg').innerHTML = \"\";
+					document.querySelector('#errorBtnIcon').innerHTML = \"\";
+					window.location.href = window.location.href;
+				});
+				</script>");
 				echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
 			}
 			finally{
@@ -91,15 +220,79 @@
 					}
 
 					if($idConsultado!=$_SESSION['id']){
-
-						echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
+						echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
+							document.querySelector('#errorText').innerHTML = \"El correo electrónico ya existe.\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"X\");
+							img.setAttribute(\"src\",\"img/loginimg/xblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"error\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/error.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+						</script>");
+						//echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
 					}else{
 
 						$sql="UPDATE usuarios2 SET nombre=:nombre,clave=:clave,correo=:correo, pais=:pais, direccion=:direccion WHERE id='" . $_SESSION['id'] . "'" ;
 						$resultado2=$base->prepare($sql);
 						$resultado2->execute(array(":nombre"=>$nombre,":clave"=>$clave,":correo"=>$correo,":pais"=>$pais,":direccion"=>$direccion));
-				
-						echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
+						echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"Perfil actualizado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+						</script>");						
+						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
 				
 						$resultado2->closeCursor();
 
@@ -110,8 +303,40 @@
 					$sql3="UPDATE usuarios2 SET nombre=:nombre,clave=:clave,correo=:correo,pais=:pais,direccion=:direccion WHERE id='" . $_SESSION['id'] . "'" ;
 						$resultado3=$base->prepare($sql3);
 						$resultado3->execute(array(":nombre"=>$nombre,":clave"=>$clave,":correo"=>$correo,":pais"=>$pais,":direccion"=>$direccion));
-				
-						echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
+						echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"Perfil actualizado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+						</script>");						
+						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
 				
 						$resultado3->closeCursor();
 				}
@@ -120,7 +345,40 @@
 				
 			}
 			catch(Exception $e){
-				echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
+				echo("<script type=\"text/javascript\" defer>
+				document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
+				document.querySelector('#errorText').innerHTML = \"Error de conexión con el servidor, intentelo de nuevo.\";
+				var img = document.createElement(\"img\");
+				img.setAttribute(\"class\",\"imagen\");
+				img.setAttribute(\"alt\",\"X\");
+				img.setAttribute(\"src\",\"img/loginimg/xblack.png\");
+				document.querySelector('#errorBtnIcon').appendChild(img);
+				var boxImg = document.createElement(\"img\");
+				boxImg.setAttribute(\"class\",\"imagen\");
+				boxImg.setAttribute(\"alt\",\"error\");
+				boxImg.setAttribute(\"src\",\"img/loginimg/error.png\");
+				document.querySelector('#errorImg').appendChild(boxImg);
+				document.querySelector('#errorBtnText').style.visibility = 'visible';
+				document.querySelector('#errorBtn').style.visibility = 'visible';
+				document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+				document.querySelector('#errorBox').style.visibility = 'visible';
+				document.querySelector('#errorImg').style.visibility = 'visible';
+				document.querySelector('#errorText').style.visibility = 'visible';
+				const btn = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.visibility = 'visible';
+				btn.addEventListener('click', () => {
+					document.querySelector('#errorBtnText').style.visibility = 'hidden';
+					document.querySelector('#errorBtn').style.visibility = 'hidden';
+					document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+					document.querySelector('#errorBox').style.visibility = 'hidden';
+					document.querySelector('#errorImg').style.visibility = 'hidden';
+					document.querySelector('#errorText').style.visibility = 'hidden';
+					document.querySelector('#errorImg').innerHTML = \"\";
+					document.querySelector('#errorBtnIcon').innerHTML = \"\";
+					window.location.href = window.location.href;
+				});
+				</script>");
+				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
 			}
 			finally{
 				$base=null;

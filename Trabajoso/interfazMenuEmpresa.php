@@ -13,6 +13,14 @@
 	</head>
 
 	<body> 
+		<div id="errorBox"> 
+			<div id="errorText"></div>
+			<div id="errorBtn"> 
+				<div id="errorBtnText"></div>
+				<div id="errorBtnIcon"></div>
+			</div>
+			<div id="errorImg"> </div>
+		</div>
 
 		<?php
 			
@@ -42,13 +50,11 @@
 			if(isset($_POST['aceptarEditar'])){
 				require("php/actualizarPerfil.php");
 				actualizarPerfilEmpresa();
-				header("Refresh:0");
 			}
 
 			if(isset($_POST['aceptarForm'])){
 				require("php/actualizarFormulario.php");
 				actualizarFormularioEmpresa();
-				header("Refresh:0");
 			}
 
 
@@ -255,7 +261,6 @@
 					<div id="downArrow"> <img class="imagen" src="img/menuAsp/arrowdown.png" alt="bajar"> </div>
 					<hr id="eLine2">
 					<button id="volverEmps"> Regresar al Menú </button>
-					<button id="add"> Agregar Fila (debug) </div>
 				</div>
 			</div>
 			<div class="sidebarContainer">

@@ -12,20 +12,6 @@
 
 	<body>
 
-	<?php
-		if(isset($_POST['aceptarRegAsp'])){
-			require("php/Registrar.php");
-			registrarUsuario();
-		
-		}
-
-		if(isset($_POST['aceptarRegEmp'])){
-			require("php/Registrar.php");
-			registrarEmpresa();
-		
-		}
-	?>
-
 		<div class="siteContainer"> 
 			<h1 class="h1"> <a href="index.html" style="text-decoration: none; color: #313131;"> TRABAJOSO </a> </h1>
 			<h3 class="h3"> ¿Necesitas empleo? <br> ¡Deja que nuestro oso lo consiga por ti! 	</h3>
@@ -118,6 +104,28 @@
 				<button id="regEmpresa"> Registrarse Como Empresa </button>
 				<button id="regAspirante"> Registrarse Como Aspirante </button>
 			</div>
+			<div id="errorBox"> 
+				<div id="errorText"></div>
+				<div id="errorBtn"> 
+					<div id="errorBtnText"></div>
+					<div id="errorBtnIcon"></div>
+				</div>
+				<div id="errorImg"> </div>
+			</div>
+
+			<?php
+			if(isset($_POST['aceptarRegAsp'])){
+				require("php/Registrar.php");
+				registrarUsuario();
+		
+			}
+
+			if(isset($_POST['aceptarRegEmp'])){
+				require("php/Registrar.php");
+				registrarEmpresa();
+				
+			}
+			?>
 		</div>
 	</body>
 	<script src="js/registro/scriptsRegistro.js"> </script>

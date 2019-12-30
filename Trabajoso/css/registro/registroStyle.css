@@ -38,7 +38,8 @@
 	background: #FF7000;
 	width: 100%;
 	height: 13%;
-	left,top: 0%;
+	left: 0%; 
+	top: 0%;
 }
 
 .fadingBoxEmpresa,.fadingBoxAspirante,.fadingBoxDefault {
@@ -354,4 +355,76 @@ h3 {
 	left: 10%;
 	font-size: 1.15vw;
 	font-family: Verdana, Geneva, sans-serif;
+}
+
+#errorBox {
+	position: absolute;
+	top: 35%;
+	left: 33%;
+	width: 34%;
+	height: 25%;
+	background-color: #FF8E36;
+	border: solid #313131 0.15em;
+	visibility: hidden;
+}
+
+#errorImg {
+	position: absolute;
+	top: 15%;
+	left: 10%;
+	width: 8%;
+	height: 20%;
+	visibility: hidden;
+}
+
+#errorText {
+	position: absolute;
+	top: 18%;
+	left: 17%;
+	width: 76%;
+	height: 10%;
+	text-align: center;
+	font-family: sans-serif,arial;
+	font-size: 1.5vw;
+	color: #222222;
+	visibility: hidden;
+}
+
+#errorBtn {
+	position: absolute;
+	top: 55%;
+	left: 35%;
+	width: 30%;
+	height: 22.5%;
+	background-color: #FFB33F;
+	border: outset #313131 0.15em;
+	border-radius: 1.5vw;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+#errorBtn:hover {
+	background-color: #FF7000;
+}
+
+#errorBtnIcon {
+	position: absolute;
+	top: 12%;
+	left: 7%;
+	width: 20%;
+	height: 76%;
+	visibility: hidden;
+}
+
+#errorBtnText {
+	position: absolute;
+	top: 25%;
+	left: 35%;
+	width: 50%;
+	height: 10%;
+	text-align: center;
+	font-family: sans-serif,arial;
+	font-size: 1.15vw;
+	color: #222222;
+	visibility: hidden;
 }

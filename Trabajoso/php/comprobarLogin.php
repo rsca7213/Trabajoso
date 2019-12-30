@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Documento</title>
 
-	</head>
-
-	<body>
 		<?php
 		$perfil;
 		$id;
@@ -48,7 +40,16 @@
 		   			}
 					}
 					else {
-						echo("<script type=\"text/javascript\">alert('Correo o contraseña inválidos.');</script>");
+						echo("<script type=\"text/javascript\" defer> 
+							const parent = document.querySelector('#loginCont'); 
+							var a = document.createElement(\"div\"); 
+							parent.appendChild(a); 
+							a.innerHTML = \"Los datos introducidos son incorrectos.\";
+							a.setAttribute(\"id\",\"errorText\");
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+						 </script>");
+						//echo("<script type=\"text/javascript\">alert('Correo o contraseña inválidos.');</script>");
 					}
 				}
 
@@ -57,8 +58,16 @@
 				$numeroRegistro=$resultado->rowCount();
 				
 				if($numeroRegistro==0){
-					
-					echo("<script type=\"text/javascript\">alert('Correo o contraseña inválidos.');</script>");
+					echo("<script type=\"text/javascript\" defer> 
+							const parent = document.querySelector('#loginCont'); 
+							var a = document.createElement(\"div\"); 
+							parent.appendChild(a); 
+							a.innerHTML = \"Los datos introducidos son incorrectos.\";
+							a.setAttribute(\"id\",\"errorText\");
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+						 </script>");
+					//echo("<script type=\"text/javascript\">alert('Correo o contraseña inválidos.');</script>");
 					
 					
 				}
@@ -66,14 +75,17 @@
 
 
 				
-			}catch(Exception $e){
-				echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
+			}catch(Exception $e) {
+				echo("<script type=\"text/javascript\" defer> 
+							const parent = document.querySelector('#loginCont'); 
+							var a = document.createElement(\"div\"); 
+							parent.appendChild(a); 
+							a.innerHTML = \"Error de conexión con el servidor.\";
+							a.setAttribute(\"id\",\"errorText\");
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+						 </script>");
+				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
 			}
 			
 		?>
-
-
-	</body>
-
-
-</html>

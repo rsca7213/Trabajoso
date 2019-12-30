@@ -25,7 +25,40 @@ function actualizarFormularioAspirante(){
 
 					$resultado2->execute(array(":id"=>$id,":nivelEst"=>$nivelEstudios,":prof"=>$profesiones,":oProf"=>$otraProfesion,":xp"=>$curriculum));
 				
-					echo("<script type=\"text/javascript\">alert('El formulario ha sido creado exitosamente.');</script>");
+					echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"El formulario de búsqueda ha sido creado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+					</script>");
+					//echo("<script type=\"text/javascript\">alert('El formulario ha sido creado exitosamente.');</script>");
 				
 					$resultado2->closeCursor();
 				}
@@ -35,7 +68,40 @@ function actualizarFormularioAspirante(){
 					$resultado3=$base->prepare($sql3);
 					$resultado3->execute(array(":nivelEst"=>$nivelEstudios,":prof"=>$profesiones,":oProf"=>$otraProfesion,":xp"=>$curriculum));
 				
-					echo("<script type=\"text/javascript\">alert('Formulario actualizado correctamente.');</script>");
+					echo("<script type=\"text/javascript\" defer>
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"El formulario de búsqueda se ha actualizado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+					</script>");
+					//echo("<script type=\"text/javascript\">alert('Formulario actualizado correctamente.');</script>");
 				
 					$resultado3->closeCursor();
 
@@ -44,7 +110,40 @@ function actualizarFormularioAspirante(){
 	
 			}
 			catch(Exception $e){
-				echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
+				echo("<script type=\"text/javascript\" defer>
+				document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
+				document.querySelector('#errorText').innerHTML = \"Error de conexión con el servidor, intentelo de nuevo.\";
+				var img = document.createElement(\"img\");
+				img.setAttribute(\"class\",\"imagen\");
+				img.setAttribute(\"alt\",\"X\");
+				img.setAttribute(\"src\",\"img/loginimg/xblack.png\");
+				document.querySelector('#errorBtnIcon').appendChild(img);
+				var boxImg = document.createElement(\"img\");
+				boxImg.setAttribute(\"class\",\"imagen\");
+				boxImg.setAttribute(\"alt\",\"error\");
+				boxImg.setAttribute(\"src\",\"img/loginimg/error.png\");
+				document.querySelector('#errorImg').appendChild(boxImg);
+				document.querySelector('#errorBtnText').style.visibility = 'visible';
+				document.querySelector('#errorBtn').style.visibility = 'visible';
+				document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+				document.querySelector('#errorBox').style.visibility = 'visible';
+				document.querySelector('#errorImg').style.visibility = 'visible';
+				document.querySelector('#errorText').style.visibility = 'visible';
+				const btn = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.visibility = 'visible';
+				btn.addEventListener('click', () => {
+					document.querySelector('#errorBtnText').style.visibility = 'hidden';
+					document.querySelector('#errorBtn').style.visibility = 'hidden';
+					document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+					document.querySelector('#errorBox').style.visibility = 'hidden';
+					document.querySelector('#errorImg').style.visibility = 'hidden';
+					document.querySelector('#errorText').style.visibility = 'hidden';
+					document.querySelector('#errorImg').innerHTML = \"\";
+					document.querySelector('#errorBtnIcon').innerHTML = \"\";
+					window.location.href = window.location.href;
+				});
+				</script>");
+				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
 			}
 			finally{
 				$base=null;
@@ -75,8 +174,40 @@ function actualizarFormularioAspirante(){
 					$resultado2=$base->prepare($sql);
 
 					$resultado2->execute(array(":id"=>$id,":nivelEst"=>$nivelEstudios,":prof"=>$profesiones,":oProf"=>$otraProfesion,":edadB"=>$edad,":details"=>$detalles));
-				
-					echo("<script type=\"text/javascript\">alert('El formulario ha sido creado exitosamente.');</script>");
+					echo("<script type=\"text/javascript\">
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"El formulario de búsqueda ha sido creado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn1 = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn1.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+					</script>");
+					//echo("<script type=\"text/javascript\">alert('El formulario ha sido creado exitosamente.');</script>");
 				
 					$resultado2->closeCursor();
 				}
@@ -85,8 +216,40 @@ function actualizarFormularioAspirante(){
 					$sql3="UPDATE formulariosempresas SET nivelEstudios=:nivelEst, profesion=:prof, otraProfesion=:oProf, edadBuscada=:edadB, detalles=:details WHERE idEmpresa='" . $_SESSION['id'] . "'" ;
 					$resultado3=$base->prepare($sql3);
 					$resultado3->execute(array(":nivelEst"=>$nivelEstudios,":prof"=>$profesiones,":oProf"=>$otraProfesion,":edadB"=>$edad,":details"=>$detalles));
-				
-					echo("<script type=\"text/javascript\">alert('Formulario actualizado correctamente.');</script>");
+					echo("<script type=\"text/javascript\">
+							document.querySelector('#errorBtnText').innerHTML = \"Aceptar\";
+							document.querySelector('#errorText').innerHTML = \"El formulario de búsqueda se ha actualizado correctamente!\";
+							var img = document.createElement(\"img\");
+							img.setAttribute(\"class\",\"imagen\");
+							img.setAttribute(\"alt\",\"iralogin\");
+							img.setAttribute(\"src\",\"img/loginimg/checkroundblack.png\");
+							document.querySelector('#errorBtnIcon').appendChild(img);
+							var boxImg = document.createElement(\"img\");
+							boxImg.setAttribute(\"class\",\"imagen\");
+							boxImg.setAttribute(\"alt\",\"exito\");
+							boxImg.setAttribute(\"src\",\"img/loginimg/checkround.png\");
+							document.querySelector('#errorImg').appendChild(boxImg);
+							document.querySelector('#errorBtnText').style.visibility = 'visible';
+							document.querySelector('#errorBtn').style.visibility = 'visible';
+							document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+							document.querySelector('#errorBox').style.visibility = 'visible';
+							document.querySelector('#errorImg').style.visibility = 'visible';
+							document.querySelector('#errorText').style.visibility = 'visible';
+							const btn1 = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.visibility = 'visible';
+							btn1.addEventListener('click', () => {
+								document.querySelector('#errorBtnText').style.visibility = 'hidden';
+								document.querySelector('#errorBtn').style.visibility = 'hidden';
+								document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+								document.querySelector('#errorBox').style.visibility = 'hidden';
+								document.querySelector('#errorImg').style.visibility = 'hidden';
+								document.querySelector('#errorText').style.visibility = 'hidden';
+								document.querySelector('#errorImg').innerHTML = \"\";
+								document.querySelector('#errorBtnIcon').innerHTML = \"\";
+								window.location.href = window.location.href;
+							});
+					</script>");
+					//echo("<script type=\"text/javascript\">alert('Formulario actualizado correctamente.');</script>");
 				
 					$resultado3->closeCursor();
 
@@ -95,7 +258,40 @@ function actualizarFormularioAspirante(){
 				
 			}
 			catch(Exception $e){
-				echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
+				echo("<script type=\"text/javascript\">
+				document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
+				document.querySelector('#errorText').innerHTML = \"Error de conexión con el servidor, intentelo de nuevo.\";
+				var img = document.createElement(\"img\");
+				img.setAttribute(\"class\",\"imagen\");
+				img.setAttribute(\"alt\",\"X\");
+				img.setAttribute(\"src\",\"img/loginimg/xblack.png\");
+				document.querySelector('#errorBtnIcon').appendChild(img);
+				var boxImg = document.createElement(\"img\");
+				boxImg.setAttribute(\"class\",\"imagen\");
+				boxImg.setAttribute(\"alt\",\"error\");
+				boxImg.setAttribute(\"src\",\"img/loginimg/error.png\");
+				document.querySelector('#errorImg').appendChild(boxImg);
+				document.querySelector('#errorBtnText').style.visibility = 'visible';
+				document.querySelector('#errorBtn').style.visibility = 'visible';
+				document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+				document.querySelector('#errorBox').style.visibility = 'visible';
+				document.querySelector('#errorImg').style.visibility = 'visible';
+				document.querySelector('#errorText').style.visibility = 'visible';
+				const btn1 = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.visibility = 'visible';
+				btn1.addEventListener('click', () => {
+					document.querySelector('#errorBtnText').style.visibility = 'hidden';
+					document.querySelector('#errorBtn').style.visibility = 'hidden';
+					document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+					document.querySelector('#errorBox').style.visibility = 'hidden';
+					document.querySelector('#errorImg').style.visibility = 'hidden';
+					document.querySelector('#errorText').style.visibility = 'hidden';
+					document.querySelector('#errorImg').innerHTML = \"\";
+					document.querySelector('#errorBtnIcon').innerHTML = \"\";
+					window.location.href = window.location.href;
+				});
+				</script>");
+				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
 			}
 			finally{
 				$base=null;

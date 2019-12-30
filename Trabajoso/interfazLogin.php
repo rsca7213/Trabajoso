@@ -11,12 +11,7 @@
 
     <body>
 
-        <?php
-        if(isset($_POST['InitBtn'])){
-            require("php/comprobarLogin.php");
         
-        }
-		?>
 
     	<div class="siteContainer"> 
     		<div class="siteNameContainer"> 
@@ -31,7 +26,7 @@
     		<div class="toploginContainer"> 
     			<img src="img/loginimg/bear.png" class="imagen">
     		</div>
-    		<div class="loginContainer">
+    		<div class="loginContainer" id="loginCont">
     			<div class="headerContainer"> 
 					<h1 class="h1"> &ensp; Iniciar Sesión </h1>
     			</div>
@@ -41,8 +36,16 @@
     				<input type="submit" id="InitBtn" name="InitBtn" value="Iniciar Sesión"> <br>
     			</form>
     			<a href="interfazRegistro.php"> <button id="RegBtn" href="interfazRegistro.php"> Registrarse </button> </a>
-    			<!--<a href="login.html"> <button id="InitBtn" href="login.html"> Iniciar Sesión </button> </a>-->
+				<!--<a href="login.html"> <button id="InitBtn" href="login.html"> Iniciar Sesión </button> </a>-->
+				<div id="errorBox"> </div>
+				<div id="errorImg"> <img src="img/loginimg/error.png" class="imagen"> </div>
     		</div>
     	</div>
+		<?php
+        if(isset($_POST['InitBtn'])){
+            require("php/comprobarLogin.php");
+        
+        }
+		?>
     </body>
 </html>

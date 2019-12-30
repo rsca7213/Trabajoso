@@ -11,22 +11,37 @@ function edad() {
 }
 
 formP.addEventListener('submit',(e) => {
-	let mail = email.value;
-	expresion =/\w+@+\w+\.+[a-z]/;
-	for (var i = 0; i<mail.length; i++) {
-		console.log(mail[i]);
-		if (mail[i] === " ") {
-			alert("ERROR! El correo introducido no es valido. Por favor intentelo de nuevo.");
-			e.preventDefault();
-			return;
-		}
-	}
 	if(edad() < 18) {
-		alert("ERROR! Debe ser mayor de edad para utilizar esta aplicación (18+ años).");
+		document.querySelector('#errorBtnText').innerHTML = "Cerrar";
+		document.querySelector('#errorText').innerHTML = "Debe ser mayor de edad para utilizar esta aplicación (18 años).";
+		var img = document.createElement("img");
+		img.setAttribute("class","imagen");
+		img.setAttribute("alt","X");
+		img.setAttribute("src","img/loginimg/xblack.png");
+		document.querySelector('#errorBtnIcon').appendChild(img);
+		var boxImg = document.createElement("img");
+		boxImg.setAttribute("class","imagen");
+		boxImg.setAttribute("alt","error");
+		boxImg.setAttribute("src","img/loginimg/edad.png");
+		document.querySelector('#errorImg').appendChild(boxImg);
+		document.querySelector('#errorBtnText').style.visibility = 'visible';
+		document.querySelector('#errorBtn').style.visibility = 'visible';
+		document.querySelector('#errorBtnIcon').style.visibility = 'visible';
+		document.querySelector('#errorBox').style.visibility = 'visible';
+		document.querySelector('#errorImg').style.visibility = 'visible';
+		document.querySelector('#errorText').style.visibility = 'visible';
+		const btn = document.querySelector('#errorBtn');
+		btn.addEventListener('click', () => {
+			document.querySelector('#errorBtnText').style.visibility = 'hidden';
+			document.querySelector('#errorBtn').style.visibility = 'hidden';
+			document.querySelector('#errorBtnIcon').style.visibility = 'hidden';
+			document.querySelector('#errorBox').style.visibility = 'hidden';
+			document.querySelector('#errorImg').style.visibility = 'hidden';
+			document.querySelector('#errorText').style.visibility = 'hidden';
+			document.querySelector('#errorImg').innerHTML = "";
+			document.querySelector('#errorBtnIcon').innerHTML = "";
+		});
+		//alert("ERROR! Debe ser mayor de edad para utilizar esta aplicación (18+ años).");
         e.preventDefault();
-	}
-	else if (!expresion.test(mail)){
-		alert("ERROR! El correo introducido no es valido. Por favor intentelo de nuevo.");
-		e.preventDefault();
 	}
 });

@@ -13,6 +13,15 @@
 	</head>
 
 	<body>
+		<div id="errorCover"> </div>
+		<div id="errorBox"> 
+			<div id="errorText"></div>
+			<div id="errorBtn"> 
+				<div id="errorBtnText"></div>
+				<div id="errorBtnIcon"></div>
+			</div>
+			<div id="errorImg"> </div>
+		</div>
 
 		<?php
 
@@ -44,13 +53,11 @@
 			if(isset($_POST['aceptarEditar'])){
 				require("php/actualizarPerfil.php");
 				actualizarPerfilAspirante();
-				header("Refresh:0");
 			}
 
 			if(isset($_POST['aceptarForm'])){
 				require("php/actualizarFormulario.php");
 				actualizarFormularioAspirante();
-				header("Refresh:0");
 			}
 
 			
@@ -60,6 +67,7 @@
 			$lafecha=$base->query("SELECT fecha FROM usuarios2 where id='" . $_SESSION['id'] . "'")->fetchAll(PDO::FETCH_OBJ);
 			$estudiosBuscados=$asp[0]->nivelEstudios;
 			$profesionBuscada=$asp[0]->profesion;
+			$otraProfesionBuscada=$asp[0]->otraProfesion;
 			$fecha=$lafecha[0]->fecha;
 			$fnac= $fecha;
 			$fnac= explode("-",$fnac);
@@ -67,7 +75,26 @@
    								 ? ((date("Y") - $fnac[0]) - 1)
     							: (date("Y") - $fnac[0]));
 			$xp=$asp[0]->experiencia;
-			$matchEmp=$base->query("SELECT * FROM formulariosempresas where nivelEstudios='" .$estudiosBuscados. "' and profesion='" .$profesionBuscada. "' and otraProfesion='" .$otraProfesionBuscada. "'")->fetchAll(PDO::FETCH_OBJ);
+
+			if($age>=18 && $age<=24){
+				$edadBuscada='18-24';
+			}
+			else if($age>=25 && $age<=34){
+				$edadBuscada='25-34';
+			}
+			else if($age>=35 && $age <=44){
+				$edadBuscada='35-44';
+			}
+			else if($age>=45 && $age<=54){
+				$edadBuscada='45-54';
+			}
+			else{
+				$edadBuscada='55+';
+			}
+
+			$matchEmp=$base->query("SELECT * FROM formulariosempresas where nivelEstudios='" .$estudiosBuscados. "' and profesion='" .$profesionBuscada. "' and otraProfesion='" .$otraProfesionBuscada. "' and edadBuscada='" .$edadBuscada."'")->fetchAll(PDO::FETCH_OBJ);
+
+			
 			
 
 
@@ -189,8 +216,8 @@
 					<div class="tableContent">
 
 						<?php foreach($matchEmp as $emp):
-								$control=0;
-								$empp=$base->query("SELECT * FROM usuarios2 where id='" .$emp->idEmpresa. "'")->fetchAll(PDO::FETCH_OBJ);
+								/*$control=0;
+								
 								
 								if($emp->edadBuscada=='55+'){
 									
@@ -213,9 +240,10 @@
     								}
     							}
 
-							?>
+							?>*/
+							$empp=$base->query("SELECT * FROM usuarios2 where id='" .$emp->idEmpresa. "'")->fetchAll(PDO::FETCH_OBJ);
 
-							<?php if($control==1){
+							//<?php if($control==1){
 
 								echo('<div class="tableContentRow">');
 								echo('<div class="nameContent">');
@@ -243,18 +271,18 @@
 								echo('<p>'.$empp[0]->direccion.'</p>');
 								echo('</div>');
 								echo('<div class="mapsImg">
-     							 			<a href="https://google.com/maps/search/'.$empp[0]->direccion.'/'.$empp[0]->pais.'" target="_blank"><img class="imagen" src="img/menuAsp/vermaps.png" alt="mapa"></a>
+     							 			<a href="https://google.com/maps/search/'.$empp[0]->nombre.'/'.$empp[0]->direccion.'/'.$empp[0]->pais.'" target="_blank"><img class="imagen" src="img/menuAsp/vermaps.png" alt="mapa"></a>
      							 		</div>');
 								echo('</div>');
 								echo('<br>');
 								echo('</div>');
-							}
+							//}
 
 
-							?>
+							
 							
 		     
-   						 <?php endforeach;?>
+   						endforeach;?>
 
 						
 					</div>
@@ -263,7 +291,6 @@
 				<div id="downArrow"> <img class="imagen" src="img/menuAsp/arrowdown.png" alt="bajar"> </div>
 				<hr id="eLine2">
 				<button id="volverEmps"> Regresar al Menú </button>
-				<button id="add"> Agregar Fila (debug) </div>
 			</div>
 		</div>
 		<div class="sidebarContainer">

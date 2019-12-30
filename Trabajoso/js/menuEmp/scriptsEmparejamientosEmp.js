@@ -12,62 +12,6 @@ function resetUpDown () {
     down.style.opacity = "1";
 }
 
-function AgregarFilaTablaEmp (name, mail, pais, edad, sexo, exp) {
-
-    var newDiv = document.createElement("div");
-    var nameText = document.createElement("div");
-    var nameDiv = document.createElement("div");
-    var mailText = document.createElement("div");
-    var mailDiv = document.createElement("div");
-    var paisText = document.createElement("div");
-    var paisDiv = document.createElement("div");
-    var edadSexoText = document.createElement("div");
-    var edadSexoDiv = document.createElement("div");
-    var expText = document.createElement("div");
-    var expDiv = document.createElement("div");
-
-    nameText.innerHTML = name;
-    mailText.innerHTML = mail;
-    paisText.innerHTML = pais;
-    edadSexoText.innerHTML = "<p>" + edad + " (" + sexo + ") </p>";
-    expText.innerHTML = exp;
-
-    newDiv.className = "tableContentRow";
-    nameDiv.className = "nameContent";
-    mailDiv.className = "mailContent";
-    paisDiv.className = "paisContent";
-    edadSexoDiv.className = "edadSexoContent";
-    expDiv.className = "expContent";
-    nameText.className = "nameText";
-    mailText.className = "mailText";
-    paisText.className = "paisText";
-    edadSexoText.className = "edadSexoText";
-    expText.className = "expText";
-
-    nameDiv.appendChild(nameText);
-    mailDiv.appendChild(mailText);
-    paisDiv.appendChild(paisText);
-    expDiv.appendChild(expText);
-    edadSexoDiv.appendChild(edadSexoText);
-    newDiv.appendChild(nameDiv);
-    newDiv.appendChild(mailDiv);
-    newDiv.appendChild(paisDiv);
-    newDiv.appendChild(edadSexoDiv);
-    newDiv.appendChild(expDiv);
-
-    tableContent.appendChild(newDiv);
-}
-
-add.addEventListener('click', () => {
-    AgregarFilaTablaEmp (
-    "<p> Juanito Perez </p>",
-    "<p> juanitoP@gmail.com </p>",
-    "<p> Venezuela </p>",
-    19, "M",
-    "<p> 5 Años trabajando en el area de arboles en venezuela con amplio conocimiento en todas las areas respectivas importantes. </p>");
-    a++;
-});
-
 up.addEventListener('mouseenter', () => {
     up.style.transitionDuration = "0.4s";
     up.style.width = "7%";
