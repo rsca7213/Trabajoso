@@ -63,6 +63,9 @@ sideForm.addEventListener('click', () => {
 sideEmps.addEventListener('click', () => {
 	var exp = textExp.value;
 	if (exp === "") {
+		document.querySelector('#errorCover').style.backgroundColor = 'black';
+		document.querySelector('#errorCover').style.opacity = "0.2";
+		document.querySelector('#errorCover').style.visibility = 'visible';
 		document.querySelector('#errorBtnText').innerHTML = "Cerrar";
 		document.querySelector('#errorText').innerHTML = "Error! Debe tener un formulario de búsqueda para ser emparejado.";
 		var img = document.createElement("img");
@@ -90,6 +93,9 @@ sideEmps.addEventListener('click', () => {
 			document.querySelector('#errorImg').style.visibility = 'hidden';
 			document.querySelector('#errorText').style.visibility = 'hidden';
 			document.querySelector('#errorImg').innerHTML = "";
+			document.querySelector('#errorCover').style.visibility = 'hidden';
+			document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+			document.querySelector('#errorCover').style.opacity = "0";
 			document.querySelector('#errorBtnIcon').innerHTML = "";
 		});
 		//alert("Error!, Debe tener un formulario de busqueda activo para observar sus emparejamientos.");
@@ -112,6 +118,9 @@ sideEmps.addEventListener('click', () => {
 				//control= data;
 
 				if(data==0){
+					document.querySelector('#errorCover').style.backgroundColor = 'black';
+					document.querySelector('#errorCover').style.opacity = "0.2";
+					document.querySelector('#errorCover').style.visibility = 'visible';
 					document.querySelector('#errorBtnText').innerHTML = "Cerrar";
 					document.querySelector('#errorText').innerHTML = "Aun no tienes emparejamientos, intentelo más tarde.";
 					var img = document.createElement("img");
@@ -140,6 +149,9 @@ sideEmps.addEventListener('click', () => {
 						document.querySelector('#errorText').style.visibility = 'hidden';
 						document.querySelector('#errorImg').innerHTML = "";
 						document.querySelector('#errorBtnIcon').innerHTML = "";
+						document.querySelector('#errorCover').style.visibility = 'hidden';
+						document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+						document.querySelector('#errorCover').style.opacity = "0";
 					});
 					//alert("Aún no tienes emparejamientos, Por favor regresa más tarde.");
 				}

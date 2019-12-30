@@ -50,6 +50,8 @@
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -61,6 +63,8 @@
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 						</script>");
 						//echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
@@ -89,6 +93,8 @@
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -100,6 +106,8 @@
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 						</script>");						
 						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
@@ -133,6 +141,8 @@
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -144,6 +154,8 @@
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 						</script>");										
 						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
@@ -175,6 +187,8 @@
 				document.querySelector('#errorImg').style.visibility = 'visible';
 				document.querySelector('#errorText').style.visibility = 'visible';
 				const btn = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.backgroundColor = 'black';
+				document.querySelector('#errorCover').style.opacity = \"0.2\";
 				document.querySelector('#errorCover').style.visibility = 'visible';
 				btn.addEventListener('click', () => {
 					document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -186,6 +200,8 @@
 					document.querySelector('#errorImg').innerHTML = \"\";
 					document.querySelector('#errorBtnIcon').innerHTML = \"\";
 					window.location.href = window.location.href;
+					document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+					document.querySelector('#errorCover').style.opacity = \"0\";
 				});
 				</script>");
 				echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
@@ -240,6 +256,8 @@
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -251,6 +269,8 @@
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 						</script>");
 						//echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
@@ -279,6 +299,8 @@
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -290,6 +312,8 @@
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 						</script>");						
 						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
@@ -323,6 +347,8 @@
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -334,6 +360,8 @@
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 						</script>");						
 						//echo("<script type=\"text/javascript\">alert('Perfil actualizado correctamente.');</script>");
@@ -365,6 +393,8 @@
 				document.querySelector('#errorImg').style.visibility = 'visible';
 				document.querySelector('#errorText').style.visibility = 'visible';
 				const btn = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.backgroundColor = 'black';
+				document.querySelector('#errorCover').style.opacity = \"0.2\";
 				document.querySelector('#errorCover').style.visibility = 'visible';
 				btn.addEventListener('click', () => {
 					document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -376,6 +406,8 @@
 					document.querySelector('#errorImg').innerHTML = \"\";
 					document.querySelector('#errorBtnIcon').innerHTML = \"\";
 					window.location.href = window.location.href;
+					document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+					document.querySelector('#errorCover').style.opacity = \"0\";
 				});
 				</script>");
 				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");

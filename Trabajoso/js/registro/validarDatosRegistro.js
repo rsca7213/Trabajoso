@@ -15,6 +15,9 @@ function edad() {
 
 formAsp.addEventListener('submit', (e) => {
 	if(edad() < 18) {
+		document.querySelector('#errorCover').style.backgroundColor = 'black';
+		document.querySelector('#errorCover').style.opacity = "0.2";
+		document.querySelector('#errorCover').style.visibility = 'visible';
 		document.querySelector('#errorBtnText').innerHTML = "Cerrar";
 		document.querySelector('#errorText').innerHTML = "Debe ser mayor de edad para utilizar esta aplicación (18 años).";
 		var img = document.createElement("img");
@@ -43,6 +46,9 @@ formAsp.addEventListener('submit', (e) => {
 			document.querySelector('#errorText').style.visibility = 'hidden';
 			document.querySelector('#errorImg').innerHTML = "";
 			document.querySelector('#errorBtnIcon').innerHTML = "";
+			document.querySelector('#errorCover').style.visibility = 'hidden';
+			document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+			document.querySelector('#errorCover').style.opacity = "0";
 		});
 		//alert("ERROR! Debe ser mayor de edad para utilizar esta aplicación (18+ años).");
         e.preventDefault();

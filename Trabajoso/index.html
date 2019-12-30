@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="es"> 
 	<head>
 		<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,40 @@
     	<link rel="icon" href="img/favicon.png">
     	<link rel="stylesheet" href="css/index/indexStyle.css">
 	</head>
-
 	<body>
 		<div class="siteContainer"> 
-			<div class="back"> </div>
+			<div class="logoContainer"> 
+				<img class="imagen" alt="logo" src="img/index/bear.png">
+			</div>
 			<h1> TRABAJOSO </h1>
-			<h2> ¿Necesitas empleo? <br> ¡Deja que nuestro oso lo consiga por ti! </h2>
-			<hr id="hline1">
-			<div class="quienesContainer"> <img src="img/index/quienes_somos.png" alt="quienes somos" class="imagen"> </div>
-			<p id="tagline"> &emsp;&emsp;Trabajoso es una aplicación web en la que puedes conseguir 
-			empleo o conseguir empleados de una manera rápida y eficaz, utilizando un sistema de emparejamientos
-			que funciona utilizando profesiones de empleo. </p>
-			<a href="interfazLogin.php"> <button id="accederBtn"> <img src="img/index/access.png" id="imagenBtn" alt="Acceder"> Acceder a la Aplicación 
-			</button> </a>
-			<hr id="hline2">
-			<div class="bearContainer"> <img  class="imagen" src="img/index/bear.png" alt="bear"> </div>
-			
+			<hr id="titleRule">
+			<div class="navBtnContainer"> 
+				<a href="interfazLogin.php"> <button id="navLogBtn"> Iniciar Sesión </button> </a>
+				<a href="interfazRegistro.php"> <button id="navRegBtn"> Registrarse </button> </a>
+			</div>
+			<div class="bodyContainer">
+				<h2> ¿Necesitas empleo? <br> ¡Deja que nuestro oso lo consiga por ti! </h2>
+				<div class="quienesContainer"> 
+					<img class="imagen" alt="quienes_somos" src="img/index/quienes_somos.png">
+				</div>
+				<h3> 
+					Trabajoso es una aplicación web en la que puedes conseguir 
+					empleo o conseguir empleados de una manera rápida y eficaz, utilizando un sistema de emparejamientos
+					que funciona utilizando profesiones de empleo. 
+				</h3>
+				<div class="img1"> <img class="imagen" alt="img1" src="img/index/ejimg1.png"> </div>
+				<div class="img2"> <img class="imagen" alt="img2" src="img/index/ejimg2.png"> </div>
+				<a href="interfazRegistro.php"> <button id="accederBtn"> 
+					¡Registrarse Ahora! &nbsp;
+					<div class="btnImg"> 
+						<img class="imagen" alt="ir" src="img/index/access.png"> 
+					</div>
+				</button> </a>
+			</div>
+			<div class="footerContainer"> 
+				<h4> TRABAJOSO </h4>
+				<p> Copyright © Trabajoso, todos los derechos reservados. </p>
+			</div>
 		</div>
 	</body>
-
 </html>

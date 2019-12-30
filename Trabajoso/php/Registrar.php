@@ -26,6 +26,8 @@
 
 				if($filas!=0){
 					echo("<script type=\"text/javascript\" defer>
+						document.querySelector('#errorCover').style.backgroundColor = 'black';
+						document.querySelector('#errorCover').style.opacity = \"0.2\";
 						document.querySelector('#errorCover').style.visibility = 'visible';
 						document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
 						document.querySelector('#errorText').innerHTML = \"El correo electrónico ya existe.\";
@@ -56,6 +58,8 @@
 							document.querySelector('#errorImg').innerHTML = \"\";
 							document.querySelector('#errorBtnIcon').innerHTML = \"\";
 							document.querySelector('#errorCover').style.visibility = 'hidden';
+							document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+							document.querySelector('#errorCover').style.opacity = \"0\";
 						});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
@@ -66,6 +70,8 @@
 					$resultado2=$base->prepare($sql);
 					$resultado2->execute(array(":nombre"=>$nombre,":clave"=>$clave,":email"=>$correo,":fecha"=>$fecha,":sexo"=>$sexo,":pais"=>$pais));
 					echo("<script type=\"text/javascript\" defer>
+						document.querySelector('#errorCover').style.backgroundColor = 'black';
+						document.querySelector('#errorCover').style.opacity = \"0.2\";
 						document.querySelector('#errorCover').style.visibility = 'visible';
 						document.querySelector('#errorBtnText').innerHTML = \"Ir a login\";
 						document.querySelector('#errorText').innerHTML = \"La cuenta fue creada exitosamente!\";
@@ -91,6 +97,8 @@
 							document.querySelector('#errorImg').innerHTML = \"\";
 							document.querySelector('#errorBtnIcon').innerHTML = \"\";
 							document.querySelector('#errorCover').style.visibility = 'hidden';
+							document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+							document.querySelector('#errorCover').style.opacity = \"0\";
 						});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('La cuenta ha sido creada exitosamente.');window.location.replace('interfazLogin.php');</script>");
@@ -104,6 +112,8 @@
 			}
 			catch(Exception $e){
 				echo("<script type=\"text/javascript\" defer>
+						document.querySelector('#errorCover').style.backgroundColor = 'black';
+						document.querySelector('#errorCover').style.opacity = \"0.2\";
 						document.querySelector('#errorCover').style.visibility = 'visible';
 						document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
 						document.querySelector('#errorText').innerHTML = \"Error de conexión con el servidor, intentelo de nuevo.\";
@@ -134,6 +144,8 @@
 							document.querySelector('#errorImg').innerHTML = \"\";
 							document.querySelector('#errorBtnIcon').innerHTML = \"\";
 							document.querySelector('#errorCover').style.visibility = 'hidden';
+							document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+							document.querySelector('#errorCover').style.opacity = \"0\";
 						});
 					</script>");
 				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
@@ -164,6 +176,8 @@
 
 				if($filas!=0){
 					echo("<script type=\"text/javascript\" defer>
+						document.querySelector('#errorCover').style.backgroundColor = 'black';
+						document.querySelector('#errorCover').style.opacity = \"0.2\";
 						document.querySelector('#errorCover').style.visibility = 'visible';
 						document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
 						document.querySelector('#errorText').innerHTML = \"El correo electrónico ya existe.\";
@@ -194,6 +208,8 @@
 							document.querySelector('#errorImg').innerHTML = \"\";
 							document.querySelector('#errorBtnIcon').innerHTML = \"\";
 							document.querySelector('#errorCover').style.visibility = 'hidden';
+							document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+							document.querySelector('#errorCover').style.opacity = \"0\";
 						});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('El correo electrónico ya existe.');</script>");
@@ -204,6 +220,8 @@
 					$resultado2=$base->prepare($sql);
 					$resultado2->execute(array(":nombre"=>$nombre,":clave"=>$clave,":email"=>$correo,":pais"=>$pais,":direccion"=>$direccion));
 					echo("<script type=\"text/javascript\" defer>
+						document.querySelector('#errorCover').style.backgroundColor = 'black';
+						document.querySelector('#errorCover').style.opacity = \"0.2\";
 						document.querySelector('#errorCover').style.visibility = 'visible';
 						document.querySelector('#errorBtnText').innerHTML = \"Ir a login\";
 						document.querySelector('#errorText').innerHTML = \"La cuenta fue creada exitosamente!\";
@@ -229,6 +247,8 @@
 							document.querySelector('#errorImg').innerHTML = \"\";
 							document.querySelector('#errorBtnIcon').innerHTML = \"\";
 							document.querySelector('#errorCover').style.visibility = 'hidden';
+							document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+							document.querySelector('#errorCover').style.opacity = \"0\";
 						});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('La cuenta ha sido creada exitosamente.');window.location.replace('interfazLogin.php');</script>");
@@ -241,6 +261,8 @@
 			}
 			catch(Exception $e){
 				echo("<script type=\"text/javascript\" defer>
+						document.querySelector('#errorCover').style.backgroundColor = 'black';
+						document.querySelector('#errorCover').style.opacity = \"0.2\";
 						document.querySelector('#errorCover').style.visibility = 'visible';
 						document.querySelector('#errorBtnText').innerHTML = \"Cerrar\";
 						document.querySelector('#errorText').innerHTML = \"Error de conexión con el servidor, intentelo de nuevo.\";
@@ -271,6 +293,8 @@
 							document.querySelector('#errorImg').innerHTML = \"\";
 							document.querySelector('#errorBtnIcon').innerHTML = \"\";
 							document.querySelector('#errorCover').style.visibility = 'hidden';
+							document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+							document.querySelector('#errorCover').style.opacity = \"0\";
 						});
 					</script>");
 				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");

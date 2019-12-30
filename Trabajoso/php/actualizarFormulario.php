@@ -45,6 +45,8 @@ function actualizarFormularioAspirante(){
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -56,6 +58,8 @@ function actualizarFormularioAspirante(){
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('El formulario ha sido creado exitosamente.');</script>");
@@ -88,6 +92,8 @@ function actualizarFormularioAspirante(){
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -99,6 +105,8 @@ function actualizarFormularioAspirante(){
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('Formulario actualizado correctamente.');</script>");
@@ -130,6 +138,8 @@ function actualizarFormularioAspirante(){
 				document.querySelector('#errorImg').style.visibility = 'visible';
 				document.querySelector('#errorText').style.visibility = 'visible';
 				const btn = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.backgroundColor = 'black';
+				document.querySelector('#errorCover').style.opacity = \"0.2\";
 				document.querySelector('#errorCover').style.visibility = 'visible';
 				btn.addEventListener('click', () => {
 					document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -141,6 +151,8 @@ function actualizarFormularioAspirante(){
 					document.querySelector('#errorImg').innerHTML = \"\";
 					document.querySelector('#errorBtnIcon').innerHTML = \"\";
 					window.location.href = window.location.href;
+					document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+					document.querySelector('#errorCover').style.opacity = \"0\";
 				});
 				</script>");
 				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
@@ -194,6 +206,8 @@ function actualizarFormularioAspirante(){
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn1 = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn1.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -205,6 +219,8 @@ function actualizarFormularioAspirante(){
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('El formulario ha sido creado exitosamente.');</script>");
@@ -236,6 +252,8 @@ function actualizarFormularioAspirante(){
 							document.querySelector('#errorImg').style.visibility = 'visible';
 							document.querySelector('#errorText').style.visibility = 'visible';
 							const btn1 = document.querySelector('#errorBtn');
+							document.querySelector('#errorCover').style.backgroundColor = 'black';
+							document.querySelector('#errorCover').style.opacity = \"0.2\";
 							document.querySelector('#errorCover').style.visibility = 'visible';
 							btn1.addEventListener('click', () => {
 								document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -247,6 +265,8 @@ function actualizarFormularioAspirante(){
 								document.querySelector('#errorImg').innerHTML = \"\";
 								document.querySelector('#errorBtnIcon').innerHTML = \"\";
 								window.location.href = window.location.href;
+								document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+								document.querySelector('#errorCover').style.opacity = \"0\";
 							});
 					</script>");
 					//echo("<script type=\"text/javascript\">alert('Formulario actualizado correctamente.');</script>");
@@ -278,6 +298,8 @@ function actualizarFormularioAspirante(){
 				document.querySelector('#errorImg').style.visibility = 'visible';
 				document.querySelector('#errorText').style.visibility = 'visible';
 				const btn1 = document.querySelector('#errorBtn');
+				document.querySelector('#errorCover').style.backgroundColor = 'black';
+				document.querySelector('#errorCover').style.opacity = \"0.2\";
 				document.querySelector('#errorCover').style.visibility = 'visible';
 				btn1.addEventListener('click', () => {
 					document.querySelector('#errorBtnText').style.visibility = 'hidden';
@@ -289,6 +311,8 @@ function actualizarFormularioAspirante(){
 					document.querySelector('#errorImg').innerHTML = \"\";
 					document.querySelector('#errorBtnIcon').innerHTML = \"\";
 					window.location.href = window.location.href;
+					document.querySelector('#errorCover').style.backgroundColor = 'transparent';
+					document.querySelector('#errorCover').style.opacity = \"0\";
 				});
 				</script>");
 				//echo("<script type=\"text/javascript\">alert('Error al conectarse con la base de datos.');</script>");
