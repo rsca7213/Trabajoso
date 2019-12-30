@@ -15,3 +15,5 @@
 * Se debe abrir la aplicación a traves de un navegador web utilizando la **ruta: localhost/trabajoso/**
 
 * Asegurarse de tener **encendido** las opciones de XAAMP: **Apache** y **MySQL**
+
+* Se debe **importar la base de datos SQL** a XAAMP a través de **PHP my Admin**
