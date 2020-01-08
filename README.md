@@ -17,3 +17,11 @@
 * Asegurarse de tener **encendido** las opciones de XAAMP: **Apache** y **MySQL**
 
 * Se debe **importar la base de datos SQL** a XAAMP a través de **PHP my Admin**
+
+<hr>
+
+### Para importar la BD SQL
+
+* Crear una BD con el nombre de "trabajoso_bd" con UTF-8_unicode_ci
+
+* Dentro la BD creada, clickear en importar e importar la base de datos .sql del proyecto con UTF8
