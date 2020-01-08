@@ -105,7 +105,7 @@ sideEmps.addEventListener('click', () => {
 
 		var ajax= new XMLHttpRequest();
 		var method= "GET";
-		var url= "verificacionEmparejamientos.php";
+		var url= '../../finaltrabajoso/php/emparejar.php?op=2';
 		var asynchronous= true;
 		
 
